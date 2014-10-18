@@ -1,0 +1,38 @@
+<div style="padding-top:100px;"></div>
+<h1>Listing invites</h1>
+
+<table class="table" >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Company</th>
+      <th>Location</th>
+      <th>Isveg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invites.each do |invite| %>
+      <tr>
+        <td><%= invite.name %></td>
+        <td><%= invite.email %></td>
+        <td><%= invite.phone %></td>
+        <td><%= invite.address %></td>
+        <td><%= invite.company %></td>
+        <td><%= invite.location %></td>
+        <td><%= invite.isVeg %></td>
+        <td><%= link_to 'Show', invite %></td>
+        <td><%= link_to 'Edit', edit_invite_path(invite) %></td>
+        <td><%= link_to 'Destroy', invite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invite', new_invite_path %>

@@ -1,0 +1,67 @@
+<div class="title text-center" id="profile">
+  <h1> Profile </h1>
+</div>
+<section class="content-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 cell"> 
+				
+				  
+				  <%= image_tag("girl.png", :alt => "rss feed", :class => "img-circle img-responsive img-center") %>
+				  <hr>
+
+				  <Lorem> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				  </Lorem>
+			</div>
+			<div class="col-sm-4 cell" > 
+				<div class="symbol">
+					<i class="fa fa-heart fa-5x heart"></i>
+					<%#= image_tag("heart.png", :alt => "rss feed", :class => "img-circle img-responsive img-center") %>
+				</div>
+
+			
+			</div>
+			<div class="col-sm-4 cell"> 
+				  <%= image_tag("boy.png", :alt => "rss feed", :class => "img-circle img-responsive img-center") %>
+				  
+				  <hr>
+
+				  <Lorem> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				  </Lorem>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<script>
+	$(document).ready(function () {
+
+	    //$(".player").mb_YTPlayer();
+
+	    var heights = $(".cell").map(function() {
+	        return $(this).height();
+	    }).get(),
+
+	    maxHeight = Math.max.apply(null, heights);
+
+	    $(".cell").height(maxHeight);
+	    $('.symbol').css('line-height',maxHeight+"px");
+
+	    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	    initialize();
+	    //alert("d");
+	});
+
+	});
+</script>

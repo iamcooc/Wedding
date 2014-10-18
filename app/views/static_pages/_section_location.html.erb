@@ -1,0 +1,141 @@
+<script>
+  function initialize() {
+    var Latlng_1 = new google.maps.LatLng(25.056375,121.522621);
+    var Latlng_2 = new google.maps.LatLng(22.770095,121.121759);
+    var map_1_Options = {
+      zoom: 16,
+      center: Latlng_1
+    }
+    var map_2_Options = {
+      zoom: 16,
+      center: Latlng_2
+
+    }
+    var map_1 = new google.maps.Map(document.getElementById('map_1'), map_1_Options);
+    var map_2 = new google.maps.Map(document.getElementById('map_2'), map_2_Options);
+
+    var marker_1 = new google.maps.Marker({
+        position: Latlng_1,
+        map: map_1,
+        title: 'here!'
+    });
+    var marker_2 = new google.maps.Marker({
+        position: Latlng_2,
+        map: map_2,
+        title: 'here!',
+        icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+
+/*
+  function loadScript() {
+	  var script = document.createElement('script');
+	  script.type = 'text/javascript';
+	  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+	      'callback=initialize';
+	  document.body.appendChild(script);
+	}    
+
+	window.onload = loadScript;
+*/
+</script> 
+
+
+<div class="title text-center" id="location">
+  <%= image_tag("frog.png", :alt => "rss feed", :class => "img-circle img-responsive img-center" , :width => "200") %><h1> 宴會資訊 </h1>
+</div>
+
+<section class="content-section">
+	<div class="container">
+		
+		<ul class="nav nav-tabs">
+        	<li class="active"><a data-toggle="tab" href="#sectionA"><h4>台北 國賓大飯店</h4></a></li>
+        	<li><a data-toggle="tab" href="#sectionB"><h4>台東 娜路彎大酒店</h4></a></li>
+		   
+		</ul>
+
+		<div class="tab-content">
+	        <div id="sectionA" class="tab-pane fade in active">
+	        	<div class="col-md-6">
+	        		<div id="map_1" class="map"></div>	
+	        	</div>
+	        	<div class="col-md-6">
+	        		<h3>12/27/2014 訂婚宴</h3>
+
+	        		<div style="display:table;">
+	        			<div class="table-row">
+	        				<div class="table-cell">
+	        					<%= fa_icon "cutlery" %> &nbsp;地點 
+	        				</div>
+	        				<div class="table-cell">
+	        					台北國賓大飯店 | 台北市中山北路二段63號
+	        				</div>
+	        			</div>
+	        			<div class="table-row">
+	        				<div class="table-cell">
+	        					<%= fa_icon "camera-retro" %> &nbsp;時間
+	        				</div>
+	        				<div class="table-cell">
+	        					12/27/2014(六) 12:00pm
+	        				</div>
+	        			</div>
+	        			<div class="table-row">
+	        				<div class="table-cell">
+	        					<%= fa_icon "bus" %> &nbsp;交通
+	        				</div>
+	        				<div class="table-cell">
+	        					搭乘捷運淡水線至『雙連站』下車，徒步至台北國賓大飯店約5分鐘
+	        				</div>
+	        			</div>
+
+	        		</div>
+	        		
+	        	</div>
+	            
+	        </div>
+	        <div id="sectionB" class="tab-pane fade">
+	            <div class="col-md-6">
+	        		<div id="map_2" class="map"></div>	
+	        	</div>
+	        	<div class="col-md-6">
+	        		<h3>1/17/2015 結婚宴</h3>
+	        		<div style="display:table;">
+	        			<div class="table-row">
+	        				<div class="table-cell">
+	        					<%= fa_icon "cutlery" %> &nbsp;地點
+	        				</div>
+	        				<div class="table-cell">
+	        					娜路彎大酒店 | 台東市連航路66號
+	        				</div>
+	        			</div>
+	        			<div class="table-row">
+	        				<div class="table-cell">
+	        					<%= fa_icon "clock-o" %> &nbsp;時間
+	        				</div>
+	        				<div class="table-cell">
+	        					1/17/2015(六) 12:00pm
+	        				</div>
+	        			</div>
+	        			<div class="table-row">
+	        				<div class="table-cell">
+								<%= fa_icon "bus" %> &nbsp;交通
+	        					
+	        				</div>
+	        				<div class="table-cell">
+	        					台東沒有捷運 搭飛機或是火車吧
+	        				</div>
+	        			</div>
+
+	        		</div>
+	        		
+	        	</div>
+	        </div>
+
+
+
+		</div>
+	</div>
+</section>		

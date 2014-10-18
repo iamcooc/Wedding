@@ -1,0 +1,47 @@
+<div class="title text-center" id="photos">
+  <%= image_tag("bear.png", :alt => "rss feed", :class => "img-circle img-responsive img-center" , :width => "200") %><h1> 照片們 </h1>
+</div>
+<div class="container">
+
+  <div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
+    <!-- Carousel indicators -->
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+          
+      </ol>   
+     <!-- Carousel items -->
+      <div class="carousel-inner">
+          <div class="active item">
+            
+            <%= image_tag("1046274861_x.jpg", :width => "1200") %>
+          </div>
+          <div class="item">
+            <%= image_tag("1049916419_x.jpg", :width => "1200") %>
+          </div>
+          <div class="item">
+            <%= image_tag("1049920577_x.jpg", :width => "1200") %>
+          </div>
+          <div class="item">
+             <%= image_tag("1049923568_x.jpg", :width => "1200") %>
+          </div>
+          <div class="item">
+             <%= image_tag("1049924980_x.jpg", :width => "1200") %>
+          </div>
+          <div class="item">
+             <%= image_tag("1049920586_x.jpg", :width => "1200") %>
+          </div>
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+  </div>
+</div>  
