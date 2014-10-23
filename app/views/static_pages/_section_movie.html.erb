@@ -2,12 +2,13 @@
 
 <section class="content-section video-section" id="movie">
   <div class="pattern-overlay">
-  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=0UjsXo9l6I8',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:0.2}">bg</a>
+  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=81jgEYyt7r8',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:0.6}"></a>
 
-
+    
     <div class="container">
       <div class="intro-text">
-      	<div class="intro-heading">
+      	
+        <div class="intro-heading">
         	We're getting married
         </div>
         <div class="intro-lead-in ">
@@ -18,6 +19,8 @@
         <div class="intro-lead-date">1. 17. 2015 @TAITUNG</div>    
       </div>
     </div>
+  
+
   </div>
 </section>
 
@@ -25,6 +28,10 @@
 
 
 <script type="text/javascript">
+ $(function(){
+      $(".player").mb_YTPlayer();
+    }); 
+
   
 /**
  * cbpAnimatedHeader.js v1.0.0

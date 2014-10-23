@@ -1,5 +1,6 @@
-
-
+@import url("//fonts.googleapis.com/css?family=Lobster+Two:700");
+@import url("//fonts.googleapis.com/css?family=Playball");
+@import url("//fonts.googleapis.com/css?family=Arvo");
 .navbar-default {
     border-color: transparent !important;
     background-color: #ED337C !important;
@@ -10,8 +11,15 @@
 
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive!important;
+    //font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive !important;
     color: #fed136 !important;
+    //color: #fff !important;
+    font-family: "Lobster Two",cursive ;
+    //font-family: 'Playball', cursive;
+    font-size: 35px !important;
+    padding-bottom: 15px !important;
+    padding-top: 15px !important;
+    text-shadow: 1px 1px 1px #555 !important;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -176,12 +184,13 @@ header .intro-text .intro-heading {
 
 .video-section .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    
-    font-family:cursive , "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-family: 'Playball', cursive;
+    //font-family:cursive , "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif !important;
     font-size: 22px;
-    //
+
     line-height: 22px;
-    color: #7B4E13;
+    //color: #7B4E13;
+    color: #ffffff;
 }
 
 .video-section .intro-text .intro-lead-date {
@@ -189,41 +198,54 @@ header .intro-text .intro-heading {
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -1px;color: #444;
+    color: #ffffff;
 
 }
 
 .video-section .intro-text .intro-heading {
-    margin-bottom: 25px;
+    //margin-bottom: 25px;
+    //text-transform: uppercase;
+    //font-family: 'Paytone One', sans-serif;
+    //font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    //font-weight: 700;
+    //line-height: 50px;
+    //font-style: italic;
+    //color: #CC9933;   
+
+    //color: #CC9933;
+    color: #ffffff;
+    font-family: 'Arvo', serif;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-top: 0;
     text-transform: uppercase;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif !important;
-    font-weight: 700;
-    line-height: 50px;
-    font-style: italic;
-    color: #CC9933;   
 }
 
 @media(min-width:768px) {
     .video-section .intro-text {
-        padding-top: 300px;
+        padding-top: 100px;
+        //padding-top: 300px;
         padding-bottom: 200px;
     }
 
     .video-section .intro-text .intro-lead-in {
         margin-bottom: 25px;
-        font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Playball', cursive;
+        //font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 40px;
         line-height: 40px;
     }
 
     .video-section .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        
-        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif ;
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-        font-style: italic;
+        //margin-bottom: 50px;
+        //text-transform: uppercase;
+        //font-family: 'Paytone One', sans-serif;
+        //font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif ;
+        //font-size: 75px;
+        //font-weight: 700;
+        //line-height: 75px;
+        //font-style: italic;
     }
 }
 
