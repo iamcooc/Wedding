@@ -1,20 +1,6 @@
 <style type="text/css">
   
-.intro {
-    //margin-top:300px;
-    display: table;
-    width: 100%;
-    height: 800px;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background:  url(<%= asset_path 'bg.jpg' %>) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+
 
 </style>
 
@@ -38,8 +24,27 @@
 
 <section class="content-section video-section visible-lg visible-md" id="movie">
   <div class="pattern-overlay">
-  <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=81jgEYyt7r8',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:0.6}"></a>
+  <!--
+  <a id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/81jgEYyt7r8',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:0.6}"></a>
+-->
 
+
+<a  id="video" 
+    class="player" 
+    data-property="{
+      showControls:true, 
+      videoURL:'81jgEYyt7r8',
+      containment:'.video-section', 
+      autoPlay:true, 
+      loop:true, 
+      mute:true, 
+      startAt:0, 
+      opacity:1, 
+      addRaster:false, 
+      quality:'default', 
+      optimizeDisplay:'true'}" 
+    style="display: none; background-image: none;" title="">My video
+</a>
     
     <div class="container">
       <div class="intro-text">
@@ -64,11 +69,13 @@
 
 
 <script type="text/javascript">
+/*
  $(function(){
       $(".player").mb_YTPlayer();
     }); 
 
-  
+ */
+
 /**
  * cbpAnimatedHeader.js v1.0.0
  * http://www.codrops.com
