@@ -180,12 +180,50 @@ header .intro-text .intro-heading {
     text-align: center;
     color: #fff;
     background: image-url('bg.jpg') no-repeat bottom center scroll;
-    background-color: #000;
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
+.intro .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+}
+
+.intro .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: 'Playball', cursive;
+    //font-family:cursive , "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-size: 18px;
+
+    line-height: 22px;
+    //color: #7B4E13;
+    color: #222;
+}
+
+.intro .intro-text .intro-lead-date {
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    font-size: 18px;
+    line-height: 40px;
+    letter-spacing: -1px;color: #444;
+    color: #222;
+
+}
+
+.intro .intro-text .intro-heading {
+    
+    color: #222;
+    font-family: 'Arvo', serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+
 
 @media (min-width: 800px) {
     .video-section{
@@ -210,7 +248,7 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     font-family: 'Playball', cursive;
     //font-family:cursive , "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif !important;
-    font-size: 22px;
+    font-size: 28px;
 
     line-height: 22px;
     //color: #7B4E13;
@@ -219,7 +257,7 @@ header .intro-text .intro-heading {
 
 .video-section .intro-text .intro-lead-date {
     font-family: times, Times New Roman, times-roman, georgia, serif;
-    font-size: 28px;
+    font-size: 22px;
     line-height: 40px;
     letter-spacing: -1px;color: #444;
     color: #ffffff;
@@ -239,13 +277,14 @@ header .intro-text .intro-heading {
     //color: #CC9933;
     color: #ffffff;
     font-family: 'Arvo', serif;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     line-height: 60px;
     padding-top: 0;
     text-transform: uppercase;
 }
 
+/*
 @media(min-width:768px) {
     .video-section .intro-text {
         padding-top: 100px;
@@ -272,7 +311,7 @@ header .intro-text .intro-heading {
         //font-style: italic;
     }
 }
-
+*/
 .content-section {
     padding-top: 20px; 
     padding-bottom: 20px;
