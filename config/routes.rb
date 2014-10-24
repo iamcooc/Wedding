@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :invites
-  resources :comments
+  
+  get 'admin/invites', to: 'invites#index'
+  resources :invites, except: :index
+  
+  get 'admin/comments', to: 'comments#index' 
+  resources :comments, except: :index
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

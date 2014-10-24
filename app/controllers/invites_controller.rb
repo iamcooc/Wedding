@@ -57,7 +57,7 @@ class InvitesController < ApplicationController
   def destroy
     @invite.destroy
     respond_to do |format|
-      format.html { redirect_to invites_url, notice: 'Invite was successfully destroyed.' }
+      format.html { redirect_to admin_invites_path, notice: 'Invite was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

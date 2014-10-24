@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+	before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
 	def new
 	end
@@ -22,6 +23,15 @@ class CommentsController < ApplicationController
 	def index
 		@comments = Comment.all
 	end	
+
+	def destroy
+		
+  	@comment.destroy
+  	respond_to do |format|
+  		format.html { redirect_to admin_comments_path, notice: 'comment was successfully destroyed.' }
+  		format.json { head :no_content }
+  	end
+  end
 
 
 
