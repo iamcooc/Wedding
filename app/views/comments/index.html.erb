@@ -5,8 +5,11 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Time</th>
       <th>Message</th>
       <th>Subject</th>
+      <th></th>	
+      <th></th>	
       <th></th>	
     </tr>
   </thead>
@@ -15,7 +18,8 @@
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.name %></td>
-        <td><%= comment.message %></td>
+        <td><%= comment.updated_at.to_s(:short) %></td>
+        <td><%= simple_format(comment.message) %></td>
         <td><%= render_subject comment.subject %></td>
       
         <td><%#= link_to 'Show', comment %></td>

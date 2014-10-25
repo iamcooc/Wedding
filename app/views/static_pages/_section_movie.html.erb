@@ -48,6 +48,9 @@
 </a>
     
     <div class="container">
+    <div id="spin_div" style="margin-top:300px;" class="text-center">
+      <i class="fa fa-circle-o-notch fa-spin fa-5x"></i>
+    </div>  
       <div class="intro-text">
       	
         <div class="intro-heading">
@@ -70,6 +73,7 @@
 
 
 <script type="text/javascript">
+   $( "#spin_div" ).fadeToggle(3000);
 /*
  $(function(){
       $(".player").mb_YTPlayer();
