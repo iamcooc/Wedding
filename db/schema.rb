@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010051420) do
+ActiveRecord::Schema.define(version: 20141030011352) do
 
   create_table "comments", force: true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141010051420) do
     t.integer  "subject"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ip"
   end
 
   create_table "invites", force: true do |t|
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 20141010051420) do
     t.boolean  "isVeg",      default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ip"
   end
 
 end

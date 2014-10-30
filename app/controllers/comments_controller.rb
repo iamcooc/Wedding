@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
 	
 	def create
 		@comment = Comment.new(comment_params)
-
+		@comment.ip = request.remote_ip
 		#
 		if @comment.save
 			respond_to do |format|

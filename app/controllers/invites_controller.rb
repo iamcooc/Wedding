@@ -1,6 +1,5 @@
 class InvitesController < ApplicationController
   before_action :set_invite, only: [:show, :edit, :update, :destroy]
-
   # GET /invites
   # GET /invites.json
   def index
@@ -25,7 +24,7 @@ class InvitesController < ApplicationController
   # POST /invites.json
   def create
     @invite = Invite.new(invite_params)
-
+    @invite.ip = request.remote_ip
   
     if @invite.save
       respond_to do |format|
@@ -72,4 +71,5 @@ class InvitesController < ApplicationController
     def invite_params
       params.require(:invite).permit(:name, :email, :phone, :address, :company, :location, :isVeg)
     end
+
 end
