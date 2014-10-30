@@ -26,13 +26,14 @@ class InvitesController < ApplicationController
     @invite = Invite.new(invite_params)
     @invite.ip = request.remote_ip
   
-    if @invite.save
-      respond_to do |format|
+    respond_to do |format|
+      if @invite.save
+      
         format.html #{ redirect_to @invite, notice: 'Invite was successfully created.' }
         format.js #{ render :show, status: :created, location: @invite }
-    #else
-      #format.html { render :new }
-      #format.json { render json: @invite.errors, status: :unprocessable_entity }
+      else
+        #format.html { render :new }
+        format.js #{ render json: @invite.errors, status: :unprocessable_entity }
       end
     end
   end
