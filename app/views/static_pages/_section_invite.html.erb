@@ -2,6 +2,13 @@
   <%= image_tag("elephant.png", :alt => "rss feed", :class => "img-circle img-responsive img-center" , :width => "200") %><h1> 出席宴會 </h1>
 </div>
 
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
 <section class="content-section">
   <div class="container">
   <%= form_for(Invite.new, :html => {:class => "form-horizontal", remote: true} ) do |f| %>
