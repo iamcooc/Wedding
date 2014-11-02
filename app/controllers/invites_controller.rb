@@ -70,7 +70,7 @@ class InvitesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def invite_params
-      params.require(:invite).permit(:name, :email, :phone, :address, :company, :location, :isVeg)
+      params.require(:invite).permit(:name, :email, :phone, :address, :company, :location, :isVeg, :zipcode)
     end
 
 end
