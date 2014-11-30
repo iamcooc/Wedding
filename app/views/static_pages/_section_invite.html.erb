@@ -65,13 +65,13 @@
       <div class="col-md-7 form-group col-xs-12">  
           <%= fa_icon "tag" %>&nbsp;<%= f.label :location, "場次", :class => "control-label " %>
           <%#= f.text_field :location, :style => "width:80%;", :class => "form-control" %>
-          <input type="hidden" name="invite[location]" value="0">
+          <input type="hidden" name="invite[location]" value="1">
 
           <div class="btn-group form-control no-border" data-toggle="buttons">
-            <label class="btn btn-warning active">
+            <label class="btn btn-warning disabled">
               <input type="radio" name="options" id="option1" checked> 台北 訂婚宴
             </label>
-            <label class="btn btn-warning disabled">
+            <label class="btn btn-warning active">
               <input type="radio" name="options" id="option2" disabled> 台東 結婚宴
             </label>
           </div>

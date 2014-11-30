@@ -3,7 +3,8 @@ class InvitesController < ApplicationController
   # GET /invites
   # GET /invites.json
   def index
-    @invites = Invite.all
+    @invites_taipei = Invite.where(location: 0)
+    @invites_taitung = Invite.where(location: 1)
   end
 
   # GET /invites/1
