@@ -1,8 +1,8 @@
 class VotesController < ApplicationController
 	def new
 		@vote = Vote.new
-		@nicks = Vote.where(candidate: 1).count
-		@maggies = Vote.where(candidate: 2).count
+		@nicks = Vote.where(candidate: 1).select(:ip).distinct.count
+		@maggies = Vote.where(candidate: 2).select(:ip).distinct.count
 	end
 	
 	def create
