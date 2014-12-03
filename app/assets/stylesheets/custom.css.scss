@@ -402,3 +402,69 @@ footer {
 body {
     //background: #FFD4D5 !important;
 }
+
+.votes_section {
+
+    margin-top:300px;
+    
+}
+
+.bs-example {
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
+    margin: 0 -15px 15px;
+    padding: 45px 15px 15px;
+    position: relative;
+}
+
+.bs-example-nick:after {
+    content: "Nick's Video";
+}
+
+.bs-example-maggie:after {
+    content: "Maggie's Video";
+}   
+
+.bs-example:after {
+    color: #959595;
+    //content: "Example";
+    font-size: 12px;
+    font-weight: 700;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
+.bs-example + .highlight, .bs-example + .zero-clipboard + .highlight {
+    border-radius: 0;
+    border-width: 0 0 1px;
+    margin: -15px -15px 15px;
+}
+@media (min-width: 768px) {
+.bs-example {
+    background-color: #fff;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    border-width: 1px;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+.bs-example + .highlight, .bs-example + .zero-clipboard + .highlight {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-width: 1px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -16px;
+}
+.bs-example-standalone {
+    border-radius: 4px;
+}
+}
+.bs-example .container {
+    width: auto;
+}

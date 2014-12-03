@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   
   get 'admin/comments', to: 'comments#index' 
   resources :comments, except: :index
+
+  resources :votes
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
