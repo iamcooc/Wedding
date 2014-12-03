@@ -1,8 +1,8 @@
 class VotesController < ApplicationController
 	def new
 		@vote = Vote.new
-		@nicks = Vote.where(candidate: 1).select(:ip).distinct.count
-		@maggies = Vote.where(candidate: 2).select(:ip).distinct.count
+		@nicks = distinct_count_query(1)
+		@maggies = distinct_count_query(2)
 	end
 	
 	def create
@@ -12,13 +12,16 @@ class VotesController < ApplicationController
     respond_to do |format|
       if @vote.save
 
-      	@nicks = Vote.where(candidate: 1).count
-				@maggies = Vote.where(candidate: 2).count
+      	@nicks = distinct_count_query(1)
+				@maggies = distinct_count_query(2)
 
       
         #format.html #{ redirect_to @invite, notice: 'Invite was successfully created.' }
         format.js #{ render location: @nicks,@maggies }
       else
+      	@message =" Look like You've voted before. Thanks for yor support."
+      	@nicks = distinct_count_query(1)
+				@maggies = distinct_count_query(2)
         #format.html { render :new }
         format.js #{ render json: @invite.errors, status: :unprocessable_entity }
       end
@@ -33,4 +36,8 @@ class VotesController < ApplicationController
 		def vote_params
       params.require(:vote).permit(:candidate)
     end
+
+    def distinct_count_query(name)
+    	Vote.where(candidate: name).select(:ip).distinct.count
+    end	
 end
