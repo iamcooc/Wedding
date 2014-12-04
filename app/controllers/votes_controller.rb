@@ -19,7 +19,7 @@ class VotesController < ApplicationController
         #format.html #{ redirect_to @invite, notice: 'Invite was successfully created.' }
         format.js #{ render location: @nicks,@maggies }
       else
-      	@message =" Look like You've voted before. Thanks for yor support."
+      	@message =" Looks like you've voted before. Thanks for yor support !"
       	@nicks = distinct_count_query(1)
 				@maggies = distinct_count_query(2)
         #format.html { render :new }
